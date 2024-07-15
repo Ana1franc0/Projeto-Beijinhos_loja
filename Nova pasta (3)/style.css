@@ -1,77 +1,69 @@
-/* * = Todos os elementos */
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* *= página inteira */
+* {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Barra de navegação*/
-
-.barra_nav{
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+body{
+    background: rgb(250, 162, 191); /*Cor do fundo*/
+    color: black; /*Cor principal do texto */
 }
+
+html{
+    font-family: inter, sans-serif;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Estilização dos elementos */
+
+/* Header */
+nav{
+    max-width: 1120px;
+    margin: auto;
+    padding: 1.5rem 10rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo{
-    font-size: 35px;
-    color:rgb(241, 42, 109);
+    font-size: 2.188rem;
     cursor: pointer;
     width: 155px;
     height: 70px;
     border-radius: 20px;
+    font-family: inter;
 }
 .logo:hover{
     transform: scale(1.1);
 }
-.video_fundo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: rgb(97, 8, 30);
 }
-.video{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 100%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: -1;
-    border-radius: 20px;
-}
-.conteudo{
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-}
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
-}
-nav ul li a{
-    color: rgb(241, 42, 109);
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-nav ul li a:hover{
+li:hover{
     color: whitesmoke;
 }
+
 .botão{
-    background-color: rgb(241, 42, 109);
+    background-color: rgb(192, 25, 81);
     color:whitesmoke;
     border: 2px solid transparent;
     font-weight: bold;
@@ -79,81 +71,112 @@ nav ul li a:hover{
     border-radius: 30px;
     height: 8%;
     text-decoration: none;
+    font-family: Lato;
 }
 .botão:hover{
     transform: scale(1.1);
 }
+/* Header */
 
-/* Conteúdo ínicio */
-.Cabeçalho{
-    height: 100vh;
-    width: 50%;
-    background-image: url(Media/Fundo\ rosa.jpeg);
-    position: absolute;
-    top:45%;
-    background-size: cover;
-    background-position: center;
+/* Main */
+.main{
     display: flex;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
-    z-index: -2;
-}
-/*
-.conteudo_cabeçalho{
-    height: 88%;
-    width: 100%;
-    position: absolute;
-    top:30%;
-    left:8%;
-    transform: translate(-50%);
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
-    z-index: 1
-} */
-.conteudo_cabeçalho{
-    width: 100px;
-    padding-top: 50px;
-    flex-basis: 100%;
-    align-items: center;
-}
-.conteudo_cabeçalho h2{
-    color:black;
-}
-button{
-    width: 180px;
-    color:black;
-    font-size: 12px;
-    padding: 12px 0;
-    background: #fff;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-    margin-top: 30px;
-}
-.conteudo_cabeçalho2{
-    display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    background-image: url(Media/Fundo\ rosa.jpeg);
-    height: 100vh;
-    width: 50%;
-    position: absolute;
-    padding-top: 45px;
-    padding-left: 50%;
-
 }
-.fotos{
-    width: 200px;
-    height: 230px;
-    display: inline-block;
+
+.principal{
+    background-color: rgb(243, 148, 180);
+}
+
+/* Hero = parte principal */
+.Hero{
+    max-width: 1120px;
+    height: 60vh; /* view height = altura da tela do navegador*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem; 
+    align-items: center;
+
+    padding: 0rem 2rem; /*Espaçamento interior*/
+    margin: auto;
+
+    overflow: clip;
+} 
+
+.Hero_conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.destaque{
+    font-family: Bebas Neue;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.rosa{
+    color: rgb(192, 25, 81);
+}
+
+h1{
+    font-family: playfair display;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 3.5rem;
+}
+
+hr{
+    width: 248px;
+    height: 2px;
+    border-color:rgb(97, 8, 30);
+}
+
+.hero-subtitulo{
+    color: rgb(24, 24, 24);
+    font-family: inter;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.Hero_imagens{
+    max-width: 45%;
+    column-count: 4;
+    column-gap: 1rem;
+    margin: -1rem;
+}
+
+.Hero_imagens > figure > img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.peças{
+    display: flex;
+    flex-direction: column;
+    max-width: 1120px;
+    padding: 3rem 2rem;
+    margin: auto;
+}
+.peças-cabeçalho{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.peças-titulo{
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
     border-radius: 10px;
     padding: 15px 25px;
     box-sizing: border-box;
@@ -161,22 +184,48 @@ button{
     margin: 10px 15px;
     background-position: center;
     background-size: cover;
-    transition: transform 0.5s;
+}
+.grid-item{
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
-.roupa1{
-    background-image: url(Media/Foto\ short\ preto\ camisa\ branca.jpeg);
+.grid-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
-.roupa2{
-    background-image: url(Media/Foto\ short\ preto\ blusa\ marrom.jpeg);
-}
-.roupa3{
-    background-image: url(Media/Foto\ conjunto\ preto.jpeg);
-}
-.roupa4{
-    background-image: url(Media/Foto\ 4\ blusas.jpeg);
-}
-
-.fotos:hover{
+.grid-item:hover{
     transform: translateY(-10px);
 }
+
+.redes_sociais{
+    font-family: Bebas Neue;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 3rem 2rem;
+    margin: auto;
+    color: rgb(192, 25, 81);
+    max-width: 1120px;
+}
+.redes_sociais img{
+    width: 50px;
+}
+/* Main */
+/* Footer */
+footer{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    font-style: italic;
+}
+/* Footer */
